@@ -1,0 +1,61 @@
+{
+  "Product": [
+    {
+      "Img": "./images/products/1.jpg",
+      "Price": 39,
+      "Name": "long red shir 11",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "Img": "./images/products/2.jpg",
+      "Price": 39,
+      "Name": "long red shirt"
+    },
+    {
+      "id": "3",
+      "Img": "./images/products/3.jpg",
+      "Price": 39,
+      "Name": "long red shirt"
+    },
+    {
+      "id": "4",
+      "Img": "./images/products/4.jpg",
+      "Price": 39,
+      "Name": "long red shirt"
+    },
+    {
+      "id": "5",
+      "Img": "./images/products/5.jpg",
+      "Price": 39,
+      "Name": "long red shirt"
+    },
+    {
+      "id": "6",
+      "Img": "./images/products/6.jpg",
+      "Price": 39,
+      "Name": "long red shirt"
+    },
+    {
+      "Img": "./images/products/6.jpg",
+      "Price": 39,
+      "Name": "long red shirt1",
+      "id": "7"
+    }
+  ],
+  "User": [
+    {
+      "id": "1",
+      "cart": [
+        {
+          "idCart": "1",
+          "amount": "1"
+        },
+        {
+          "idCart": "2",
+          "amount": "1"
+        }
+      ]
+    }
+  ]
+}

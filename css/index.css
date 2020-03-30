@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,900&display=swap");
+.product {
+  padding: 50px 0;
+}
+.product__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+.product__item {
+  text-align: center;
+}
+.product__item-img {
+  height: 300px;
+}
+.product__item-img img {
+  object-fit: scale-down;
+}
+.product__item-info {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+.product__item-info p {
+  margin-top: 20px;
+}
+.product__item-info p span {
+  margin-left: 5px;
+  font-size: 1.8rem;
+}
+.product__item-info button {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  background-color: initial;
+  border: 2px solid #414141;
+  margin-top: 10px;
+  font-weight: 100;
+}
+.product__item-info button:hover {
+  background-color: #e6ae48;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.css.map */

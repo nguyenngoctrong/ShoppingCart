@@ -1,0 +1,24 @@
+include database
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(href="../fontawesome/css/all.css", rel="stylesheet")
+        link(href="../css/style.css", rel="stylesheet")
+        block css
+    body
+        .modal(onclick='closeModal()')
+            .modal__content
+                .modal__header
+                    i(onclick = "closeModal()").fas.fa-times
+                .modal__body
+                    p.modal__body-title Are you sure you want to delete this product ?
+                    .modal__body-box
+                .modal__footer
+        include header
+        block  content
+        script(type="module" src="../js/style.js")
+        block js

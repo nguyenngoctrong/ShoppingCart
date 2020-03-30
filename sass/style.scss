@@ -1,0 +1,247 @@
+@import './reset';
+
+header{
+    background-color: $color-purple;
+
+}
+
+.nav{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    &__brand{
+        height: $px100;
+        width: 10%;
+        img{
+            object-fit: scale-down;
+        }
+    }
+    &__menu{
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        font-size: $r-1-5;
+        text-transform: uppercase;
+        color: $color-secondary;
+        padding-top:$px42;;
+    }
+    &__sub{
+        margin-right: $px200;
+        position: relative;
+        &-cart{
+            margin-top: $px35;
+            &>p{
+                position: absolute;
+                top: 23%;
+                right: 0;
+                text-align: center;
+                color: $color-white;
+                height: $px25;
+                width: $px25;
+                box-sizing: border-box;
+                font-size: $r-1-3;
+                background-color: $color-dark;
+                border-radius: 50%;
+                transform: translateX(50%);
+                span{
+                    display: block;
+                    margin-top: $px5;
+                }
+            }
+
+        }
+        &:hover{
+            .nav__bag{
+                height: auto;
+                width: auto;
+                overflow: initial;
+                padding: $px20;
+            }
+        }
+    }
+    &__bag{
+        position: absolute;
+        top: 90%;
+        right:  -100%;
+        background-color: $color-secondary;
+        padding: 0;
+        border-radius: $px5;
+        transition: 0.35s all ease;
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        z-index: 110;
+        
+        &::before{
+            content: '';
+            position: absolute;
+            right: 10%;
+            bottom: 100%;
+            width: 0;
+            height: 0;
+            border-left: $px15 solid transparent;
+            border-right: $px15 solid transparent;
+            border-bottom: $px15 solid $color-secondary;
+        }
+        &-title{
+            font-size: $r-2-5;
+            text-transform: uppercase;
+        }
+        &>a{
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: $color-purple;
+            text-decoration: none;
+            color: $color-white;
+            font-size: $r-1-9;
+            padding: $px5 0;
+            text-transform: uppercase;
+            border-radius: $px5;
+
+        }
+
+
+    }
+    &__list{
+
+        margin: $px20 0;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-row-gap: $px20;
+        height: $px200;
+        overflow-y: scroll;
+        &-subimg{
+            height: 200px;
+            width: 200px;
+        }
+    }
+    &__item{
+        display: flex;
+        font-size: $r-1-7;
+        width: 400px;
+        justify-content: space-between;
+        border: $px1 solid $color-border;
+        padding: $px10;
+        &-img{
+            width: 60px;
+            height: 60px;
+        }
+        &>p{
+            text-transform: uppercase;
+            margin-right: $px40;
+        }
+        &-info{
+            color: $color-purple;
+            width: $px100;
+            span{
+                margin-left: $px5;
+                font-size: $r-1-9;
+            }
+            button{
+                margin-top: $px10;
+                padding: $px5 $px10;
+                background-color: initial;
+                border: $px2 solid $color-dark1;
+                &:hover{
+                    color: $color-white;
+                    background-color: $color-red;
+                    border: $px2 solid $color-red;
+                    cursor: pointer;
+                }
+            }
+        }
+        
+    }
+}
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    z-index: 999999;
+    &__content{
+        background-color: $color-white;
+        width: 40%;
+        margin: $px50 auto;
+        transform: translateY(-130%);
+        opacity: 0;
+        transition: all 0.35s ease;
+    }
+    &__header{
+        border-bottom: $px1 solid $color-border;
+        text-align: right;
+        i{
+            font-size: $r-2-5;
+            margin: $px20;
+            color: $color-gray;
+            &:hover{
+                cursor: pointer;
+                color: $color-purple;
+            }
+        }
+    }
+    &__body{
+        text-align: center;
+        padding: $px10 $px20;
+        border-bottom: $px1 solid $color-border;
+        img{
+            display: block;
+            height: 50px;
+            width: 50px;
+            margin: 0 auto;
+            margin-top: $px10;
+            
+        }
+        &-title{
+            color: $color-purple;
+            font-size: 3rem;
+        }
+        &-name{
+            color: $color-dark;
+            font-size: 2rem;
+            margin-top: $px10;
+            text-transform: uppercase;
+        }
+    }
+    &__footer{
+        padding: $px20 0;
+        display: flex;
+        justify-content: space-between;
+        button{
+            width: $px100;
+            padding: $px7 0;
+            &:nth-child(1){
+                margin-left: $px150;
+                &:hover{
+                    cursor: pointer;
+                    border: $px2 solid $color-purple;
+                    background-color: $color-purple;
+                    color: $color-white;
+                }
+            }
+            &:nth-child(2){
+                margin-right: $px150;
+                &:hover{
+                    cursor: pointer;
+                    border: $px2 solid $color-red;
+                    background-color: $color-red;
+                    color: $color-white;
+                }
+            }
+            border: $px2 solid $color-dark1;
+            background-color: initial;
+            
+            
+        }
+    }
+}
+.modal-active{
+    visibility: visible;
+    .modal__content{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

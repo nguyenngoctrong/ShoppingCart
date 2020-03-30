@@ -1,0 +1,17 @@
+header 
+    .container
+        .nav
+            .nav__brand
+                img(src='../images/logo.png')
+            ul.nav__menu
+                each m in menu
+                    li=m
+            .nav__sub
+                .nav__sub-cart  
+                    img(src="../images/icon/bag.png", alt="")
+                    p 
+                        span 0
+                .nav__bag
+                    p.nav__bag-title Bag
+                    .nav__list
+                    a(href="../cart.html") View Bag

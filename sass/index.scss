@@ -1,0 +1,46 @@
+@import './variable';
+
+.product{
+    padding: 50px 0;
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap:$px30;
+    }
+    &__item{
+        text-align: center;
+        &-img{
+            height: $px300;
+            img{
+                object-fit: scale-down;
+            }
+        }
+        &-info{
+            text-transform: uppercase;
+            font-size: $r-1-6;
+            p{
+                margin-top: $px20;
+                span{
+                    margin-left: $px5;
+                    font-size: $r-1-8;
+                }
+            }
+            button{
+                text-transform: uppercase;
+                font-size: $r-1-5;
+                padding: $px10 $px20;
+                background-color: initial;
+                border: $px2 solid $color-dark1;
+                margin-top: $px10;
+                font-weight: 100;
+                &:hover{
+                    background-color: $color-gold;
+                    color: $color-white;
+                    border: none;
+                    cursor: pointer;
+
+                }
+            }
+        }
+    }
+}

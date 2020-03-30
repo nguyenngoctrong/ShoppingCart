@@ -1,0 +1,84 @@
+extends pug/layout
+block css 
+    link(href="./css/purchase.css", rel="stylesheet")
+block content
+    section.purchase 
+        .container 
+            .purchase__step
+                .purchase__step-box.-cart.-active
+                    p step 1
+                    p Cart
+                .purchase__step-box.-info.-active
+                    p step 2
+                    p Your Information
+                .purchase__step-box.-re
+                    p step 3
+                    p review and pay
+                .purchase__step-box.-ship
+                    p step 4
+                    p shipping    
+                .purchase__step-box.-done
+                    p step 5
+                    p Done
+    section.content
+        .container
+            .content__infor
+                p.content__infor-title Add Your Information
+                form.content__form
+                    .content__form-box
+                        .content__form-group
+                            span Name : 
+                            input(type="text" placeholder="Your Name")
+                        .content__form-group
+                            span Phone Number : 
+                            input(type="text" id="phoneNumber" placeholder="Your Phone Number")
+                        .content__form-group
+                            span Country : 
+                            select
+                                option USA
+                                option Viet Nam
+                        .content__form-group
+                            span City : 
+                            select
+                                option New York
+                                option Da Nang
+                        .content__form-group
+                            span Address : 
+                            input(type="text" placeholder=" Your Address")
+                    .content__form-box
+                        .content__form-group
+                            p Payment Type :
+                            .content__form-radio
+                                input(type="radio" name="payment" id="paypal" onclick="inputCheck(event)" placeholder=" Your Address")
+                                label(for="paypal")
+                                    img(src="./images/002-paypal.png", alt="")
+                            .content__form-radio
+                                input(type="radio" name="payment" id="credit" onclick="inputCheck(event)" placeholder=" Your Address")
+                                label(for="credit")
+                                    img(src="./images/004-mastercard.png", alt="")
+                            .content__form-radio
+                                input(type="radio" name="payment" id="recive" checked placeholder=" Your Address")
+                                label(for="recive") Payment on delivery
+                        .content__form-group.-bank
+            .content__pay
+                p.content__pay-titile The Amount You Need To Pay
+                p.content__pay-price
+            
+                .content__pay-check
+                    input(type="checkbox")
+                    span Confirm . Nothing wrong
+            .content__shipping
+                img(src="./images/shipping.gif", alt="")
+            .content__done
+                p Thank you very much !!!
+                a(href="./index.html", title="title") Back to home
+    p(id="erroForm")
+    section.change
+        .container
+            button( onclick = "purchaseBack()").change__back  &laquo; Back
+            p  
+            button(id="psNext" onclick = "purchaseNext()").change__next Nex &raquo;
+    
+
+block js
+    script(type="module" src="./js/purchase.js")

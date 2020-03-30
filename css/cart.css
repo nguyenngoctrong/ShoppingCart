@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,900&display=swap");
+.bag {
+  padding-top: 30px;
+}
+.bag__title {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+.bag table {
+  font-size: 1.7rem;
+  border-spacing: 40px;
+  width: 100%;
+  border-collapse: collapse;
+  height: auto;
+  transition: all 0.5s ease;
+}
+.bag table tr {
+  border: 1px solid #e7e7e7;
+}
+.bag table tr td {
+  vertical-align: top;
+  padding: 20px;
+}
+.bag table tr td:nth-child(1) {
+  display: flex;
+}
+.bag table tr td:nth-child(1) img {
+  display: block;
+  height: 150px;
+  width: 150px;
+}
+.bag table tr td:nth-child(1) p {
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+.bag table tr td button {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  background-color: initial;
+  border: 2px solid #414141;
+  font-weight: 100;
+}
+.bag table tr td button:hover {
+  background-color: #BE7ACD;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+.bag table tr:nth-child(1) td:nth-child(n+2) {
+  color: #818181;
+}
+.bag__pay {
+  margin: 50px 0;
+  padding: 40px;
+  border: 1px solid #e7e7e7;
+  display: flex;
+  justify-content: space-around;
+}
+.bag__pay p {
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: #818181;
+}
+.bag__pay p i {
+  margin-top: 20px;
+  display: block;
+  font-size: 3rem;
+  color: #BE7ACD;
+}
+.bag__pay a {
+  display: block;
+  border: 2px solid #414141;
+  padding: 25px 50px;
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: #414141;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.bag__pay a:hover {
+  border: 2px solid #BE7ACD;
+  color: #ffffff;
+  background-color: #BE7ACD;
+}
+
+/*# sourceMappingURL=cart.css.map */

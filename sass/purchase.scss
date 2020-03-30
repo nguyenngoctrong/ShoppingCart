@@ -1,0 +1,211 @@
+@import "./variable";
+@mixin setcolor {
+    
+}
+.purchase{
+    padding: $px30 0;
+    &__step{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        text-align: center;
+        overflow: hidden;
+        &-box{
+            padding: $px10 0;
+            position: relative;
+            opacity: .5;
+            p{
+                text-transform: capitalize;
+                font-size: 3rem;
+                &:nth-child(2){
+                    font-size: $r-2;
+                    margin-top: $px10;
+
+                }
+            }
+            &.-cart{
+                background-color: #D58B26;
+                &::before{
+                    border-left: 25px solid #D58B26;
+                }
+            }
+            &.-info{
+                background-color: #981E27;
+                &::before{
+                    border-left: 25px solid #981E27;
+                }
+            }
+            &.-re{
+                background-color: #009AD0;
+                &::before{
+                    border-left: 25px solid #009AD0;
+                }
+            }
+            &.-ship{
+                background-color: $color-purple;
+                &::before{
+                    border-left: 25px solid $color-purple;
+                }
+            }
+            &.-done{
+                background-color: #79AD00;
+            }
+        }
+    }
+}
+.-active{
+    opacity: 1;
+    &::before{
+        position: absolute;
+        content: "";
+                top: -1%;
+        left: 100%;
+        width: 0;
+        height: 0;
+        border-top: 45px solid transparent;
+        border-bottom: 45px solid transparent;
+        z-index: 100;
+    }
+
+}
+
+.content{
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        overflow: hidden;
+        // margin-left: -1080px;
+        transition: all .5s ease;
+        &>div{
+            width: 1180px;
+            box-sizing: border-box;
+        }
+    }
+    &__infor{
+        padding: $px30;
+        &-title{
+            font-size: 3rem;
+
+        }
+    }
+    &__form{
+        font-size: 2rem;
+        display: flex;
+        &-box{
+            &:nth-child(2){
+                margin-left: $px50;
+            }
+        }
+        input[type="text"],select{
+            padding: $px10;
+            width: $px300;
+        }
+        &-group{
+            span{
+                display: inline-block;
+                width: 150px;
+            }
+            margin-top: $px25;
+        }
+        &-radio{
+            display: flex;
+            align-items: flex-start;
+            margin-top: $px20;
+            img{
+                height: $px20;
+                width: $px66;
+            }
+            input{
+                margin-right: $px20;
+            }
+        }
+    }
+    &__pay{
+        text-align: center;
+        &-titile{
+            @extend .content__infor-title
+        }
+        p{
+            margin-top: $px20;
+        }
+        &-price{
+            i{
+                font-size: 3rem;
+                color:$color-purple;
+            }
+        }
+        &-check{
+            margin-top: $px20;
+            span{
+                font-size: $r-1-7;
+                margin-left: $px10;
+            }
+        }
+    }
+    &__shipping{
+        img{
+            display: block;
+            width: 50%;
+            height: 400px;
+            margin: $px20 auto;
+
+        }
+        
+    }
+    &__done{
+        text-align: center;
+        p{
+            font-size: 5rem;
+            margin-top: $px40;
+            color: #79AD00 ;
+        }
+        a{
+            display: block;
+            text-transform: uppercase;
+            margin: $px50 auto;
+            text-decoration: none;
+            font-size: $r-2;
+            border: 2px solid $color-dark1;
+            padding: $px10 $px20;
+            color: $color-dark1;
+            width: 200px;
+            &:hover{
+                color: $color-white;
+                background-color: $color-purple;
+                border-color: $color-purple;
+
+            }
+        }
+    }
+}
+.change{
+    padding: $px50;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        button{
+            width: 100px;
+            padding: $px10 0;
+            font-size: 2rem;
+            color: $color-white;
+            border: none;
+            &:hover{
+                cursor: pointer;
+            }
+            &:nth-child(1){
+                background-color: rgb(116, 7, 7);
+                display: none;
+            }
+            &:nth-child(3){
+                background-color: rgb(47, 65, 5);
+            }
+        }
+    }
+}
+#erroForm{
+    margin-top: $px40;
+    font-size: $r-2;
+    text-align: center;
+    font-style: italic;
+    font-weight: bolder;
+    color: $color-red;
+}

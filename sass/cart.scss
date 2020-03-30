@@ -1,0 +1,97 @@
+@import './variable';
+.bag{
+    padding-top: $px30;
+    &__title{
+        font-size: 4rem;
+        margin-bottom: $px20;
+    }
+    table{
+        font-size: $r-1-7;
+        border-spacing: $px40 ;
+        width: 100%;
+        border-collapse: collapse;
+        height: auto;
+        transition: all .5s ease;
+
+        tr{
+            border: 1px solid $color-border;
+            td{
+                vertical-align: top;
+                padding: $px20;
+                &:nth-child(1){
+                    display: flex;
+                    img{
+                        display: block;
+                        height: $px150;
+                        width: $px150;
+                    }
+                    p{
+                        margin-left: $px20;
+                        text-transform: uppercase;
+                    }
+                }
+                button{
+                    text-transform: uppercase;
+                    font-size: $r-1-5;
+                    padding: $px10 $px20;
+                    background-color: initial;
+                    border: $px2 solid $color-dark1;
+                    font-weight: 100;
+                    &:hover{
+                        background-color: $color-purple;
+                        color: $color-white;
+                        border: none;
+                        cursor: pointer;
+
+                    }
+                }
+            }
+        }
+        tr:nth-child(1){
+            td{
+                &:nth-child(n+2){
+                    color: $color-smokegrey;
+
+                }
+            }
+        }
+
+    }
+    &__pay{
+        margin: $px50 0;
+        padding: $px40;
+        border: $px1 solid $color-border;
+        display: flex;
+        justify-content: space-around;
+        p{
+            text-align: center;
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight:bolder;
+            color: $color-smokegrey;
+
+            i{
+                margin-top: $px20;
+                display: block;
+                font-size: 3rem;
+                color: $color-purple;
+            }
+        }
+        a{
+            display: block;
+            border: $px2 solid $color-dark1;
+            padding: $px25 $px50;
+            text-decoration: none;
+            font-size: $r-2-5;
+            color: $color-dark1;
+            text-transform: uppercase;
+            font-weight: bold;
+            &:hover{
+                border: $px2 solid $color-purple;
+                color: $color-white;
+                background-color: $color-purple;
+            }
+            
+        }
+    }
+}
